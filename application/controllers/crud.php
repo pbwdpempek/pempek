@@ -130,12 +130,12 @@ function update() {
       $this->m_data->update_data($where,$data,'data_pembeli');
       redirect('admin/index');
 	}
-}
+
 function hapus($no_ktp){
     $where = array('no_ktp' => $no_ktp);
     $this->m_data->hapus_data($where,'data_pembeli');
     redirect('admin/index');
   }
-
+}
 
 ?>
