@@ -47,7 +47,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Pempek Palembang</a>
+                <a class="navbar-brand page-scroll" href="<?php echo base_url().'index.php/admin/index';?>">Pempek Palembang</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,13 +80,15 @@
         <!-- /.container-fluid -->
     </nav>
 
+	
+	
     <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Selamat Datang!</div>
                 <div class="intro-heading">Pempek Palembang Asli</div>
-                <a href="#services" class="page-scroll btn btn-xl">Menu</a>
+				<a href="#services" class="page-scroll btn btn-xl">Menu</a>
             </div>
         </div>
     </header>
@@ -105,54 +107,67 @@
 		<!--div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active"-->
-            <div class="row text-center">
-			<?php echo form_open('crud/tambah'); ?>
-                <div class="col-md-4">
+			<div class="row text-center">
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <img src="<?php echo base_url().'assets/img/pempek-lenjer.png';?>" width="130" height="100"/> 
                     </span>
                     <h4 class="service-heading">Pempek Lenjer</h4>
                     <p class="text-muted">Pempek lenjer adalah salah satu jenis atau ragam dari pempek yang terkenal khas dari Kota Palembang dan Sumatera Selatan pada umumnya.</p>
-                <h5> Mau pesan? </h5>
-				<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="lenjer" id="lenjer" >
 				</div>
-				<!--div class="carousel-item"-->
-                <div class="col-md-4">
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
                        <img src="<?php echo base_url().'assets/img/pempek-kapalselam.jpg';?>" width="130" height="100"/>
                        
                     </span>
                     <h4 class="service-heading">Pempek Kapal Selam</h4>
                     <p class="text-muted">Jenis pempek yang terkenal adalah "pempek kapal selam", yaitu telur ayam yang dibungkus dengan adonan pempek dan digoreng dalam minyak panas.</p>
-					<h5> Mau pesan? </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="kapalselam" id="kapalselam">
 				</div>
-				<!--/div-->
-				<!-- <div class="col-md-4">
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
-                       <img src="<?php echo base_url().'assets/img/pempek-kapalselam.jpg';?>" width="130" height="100"/>
+                       <img src="<?php echo base_url().'assets/img/kulit.jpg';?>" width="130" height="100"/>
                        
                     </span>
                     <h4 class="service-heading">Pempek Kulit</h4>
                     <p class="text-muted">Jenis pempek ini dari bahan kulit ikan.</p>
-					<h5> Mau pesan? </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="kulit">
-				</div> -->
-                <!--div class="carousel-item"-->
-                <div class="col-md-4">
+				</div>
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
-                        <img src="<?php echo base_url().'assets/img/kulit.jpg';?>" width="100" height="100"/>
+                        <img src="<?php echo base_url().'assets/img/pempek-adaan.jpg';?>" width="100" height="100"/>
                     </span>
                     <h4 class="service-heading">Pempek Adaan</h4>
                     <p class="text-muted">Pempek adaan adalah salah satu jenis pempek khas dari Palembang yang tidak kalah populernya dari pempek kapal selam.</p>
-                <h5> Mau pesan? </h5>
-				<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="adaan" id="adaan" >
+                </div>
+			</div>
+			
+            <div class="row text-center">
+			<?php echo form_open('crud/tambah'); ?>
+			    <div class="col-md-3">
+					<h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+					<input type="number" name="lenjer" id="lenjer" class="form-control">
+				</div>
+				
+                <div class="col-md-3">
+                    <h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+				<input type="number" name="kapalselam" id="kapalselam" class="form-control">
+				</div>
+				
+				<div class="col-md-3">
+                    <h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+				<input type="number" name="kulit" class="form-control">
+				</div>
+               
+                <div class="col-md-3">
+                    <h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+					<input type="number" name="adaan" id="adaan" class="form-control">
 				</div>
             </div>
+			
+					
 			<!--/div-->
 			
 			<!--/div>
@@ -167,11 +182,21 @@
   </a>
 			</div>
 			<!-- masukan button nya disini -->
-			<div class="col-lg-12 text-center">
+			<h1>  </h1>
+			<div class="col-md-12 text-center">
             <div id="success"></div>
+			<h1>  </h1>
             <button  type="submit" value="login" class="btn btn-xl">BELI</button>
             </div>
 			<?php echo form_close(); ?>
+			
+			<div class="row">
+			<div class="col-md-4">
+			<h6 style="color:red">*Pesanan berupa kemasan beku (frozen)</h6>
+			<h6 style="color:red">(harga sewaktu-waktu bisa berubah)</h6>
+			</div>
+			</div>
+			
         </div>
     </section>
 
