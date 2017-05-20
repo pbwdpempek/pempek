@@ -14,7 +14,7 @@ class Admin extends CI_Controller{
 	function index(){
 		$data['data_pembeli'] = $this->m_data->tampil_data();
 		$data['bukti_pembayaran'] = $this->m_data->tampil_bayar();
-		$this->load->view('v_admin', $data);
+		$this->load->view('admin_panel', $data);
 
 	}
 }
