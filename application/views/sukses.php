@@ -63,10 +63,16 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
+					
+					<li>
+					<a class="page-scroll" href="#bayar">Pembayaran</a>
+					</li>
                   
 					<li>
                         <a class="page-scroll" href="#login">Login</a>
                     </li>
+					
+					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -78,8 +84,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Data Anda Telah Kami Terima</div>
-                <div class="intro-heading">Tunggu konfirmasi dari kami</div>
+                <div class="intro-lead-in">Data Anda Berhasil Kami Terima!</div>
+                <div class="intro-heading">Pempek Palembang Asli</div>
                 <a href="#services" class="page-scroll btn btn-xl">Menu</a>
             </div>
         </div>
@@ -99,54 +105,67 @@
 		<!--div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active"-->
-            <div class="row text-center">
-			<?php echo form_open('crud/tambah'); ?>
-                <div class="col-md-4">
+			<div class="row text-center">
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <img src="<?php echo base_url().'assets/img/pempek-lenjer.png';?>" width="130" height="100"/> 
                     </span>
                     <h4 class="service-heading">Pempek Lenjer</h4>
                     <p class="text-muted">Pempek lenjer adalah salah satu jenis atau ragam dari pempek yang terkenal khas dari Kota Palembang dan Sumatera Selatan pada umumnya.</p>
-                <h5> Mau pesan? </h5>
-				<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="lenjer" id="lenjer" >
 				</div>
-				<!--div class="carousel-item"-->
-                <div class="col-md-4">
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
                        <img src="<?php echo base_url().'assets/img/pempek-kapalselam.jpg';?>" width="130" height="100"/>
                        
                     </span>
                     <h4 class="service-heading">Pempek Kapal Selam</h4>
                     <p class="text-muted">Jenis pempek yang terkenal adalah "pempek kapal selam", yaitu telur ayam yang dibungkus dengan adonan pempek dan digoreng dalam minyak panas.</p>
-					<h5> Mau pesan? </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="kapalselam" id="kapalselam">
 				</div>
-				<!--/div-->
-				<!-- <div class="col-md-4">
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
-                       <img src="<?php echo base_url().'assets/img/pempek-kapalselam.jpg';?>" width="130" height="100"/>
+                       <img src="<?php echo base_url().'assets/img/kulit.jpg';?>" width="130" height="100"/>
                        
                     </span>
                     <h4 class="service-heading">Pempek Kulit</h4>
                     <p class="text-muted">Jenis pempek ini dari bahan kulit ikan.</p>
-					<h5> Mau pesan? </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="kulit">
-				</div> -->
-                <!--div class="carousel-item"-->
-                <div class="col-md-4">
+				</div>
+				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
-                        <img src="<?php echo base_url().'assets/img/kulit.jpg';?>" width="100" height="100"/>
+                        <img src="<?php echo base_url().'assets/img/pempek-adaan.jpg';?>" width="100" height="100"/>
                     </span>
                     <h4 class="service-heading">Pempek Adaan</h4>
                     <p class="text-muted">Pempek adaan adalah salah satu jenis pempek khas dari Palembang yang tidak kalah populernya dari pempek kapal selam.</p>
-                <h5> Mau pesan? </h5>
-				<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="adaan" id="adaan" >
+                </div>
+			</div>
+			
+            <div class="row text-center">
+			<?php echo form_open('crud/tambah'); ?>
+			    <div class="col-md-3">
+					<h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+					<input type="number" name="lenjer" id="lenjer" class="form-control">
+				</div>
+				
+                <div class="col-md-3">
+                    <h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+				<input type="number" name="kapalselam" id="kapalselam" class="form-control">
+				</div>
+				
+				<div class="col-md-3">
+                    <h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+				<input type="number" name="kulit" class="form-control">
+				</div>
+               
+                <div class="col-md-3">
+                    <h5> Mau pesan?* </h5>
+					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
+					<input type="number" name="adaan" id="adaan" class="form-control">
 				</div>
             </div>
+			
+					
 			<!--/div-->
 			
 			<!--/div>
@@ -161,8 +180,21 @@
   </a>
 			</div>
 			<!-- masukan button nya disini -->
-			<input type="submit" value="Beli!"</input>
+			<h1>  </h1>
+			<div class="col-md-12 text-center">
+            <div id="success"></div>
+			<h1>  </h1>
+            <button  type="submit" value="login" class="btn btn-xl">BELI</button>
+            </div>
 			<?php echo form_close(); ?>
+			
+			<div class="row">
+			<div class="col-md-4">
+			<h6 style="color:red">*Pesanan berupa kemasan beku (frozen)</h6>
+			<h6 style="color:red">(harga sewaktu-waktu bisa berubah)</h6>
+			</div>
+			</div>
+			
         </div>
     </section>
 
@@ -234,9 +266,50 @@
             </div>
         </div>
     </section>
+	
+	<!-- bayar -->
+	
+	<section id="bayar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Upload Bukti Pembayaran</h2>
+                    <h3 class="section-subheading text-muted">Upload Bukti Pembayaran Anda Disini</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+					<?php echo form_open_multipart('crud/uppload'); ?>
+                    <!--form action="<?php //echo site_url('login/aksi_login'); ?>" method="post"-->
+                    <!--form action="<?php echo base_url().'crud/update'; ?>" enctype="multipart/form-data" method="post"-->
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4">
+                                <div  class="form-group">
+                                    <input type="text" class="form-control" placeholder="Isi identitas sesuai pada saat pembelian" name="no_ktp" id="no_ktp" required data-validation-required-message="Please enter your identity.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name='gambar' id='gambar'>
+									<p class="help-block text-danger"></p>
+                                </div>
+                                
+                            </div>
+                            
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button  type="submit" value="login" class="btn btn-xl">Upload</button>
+                            </div>
+                        </div>
+					<?php echo form_close(); ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
    
-    <!-- Clients Aside -->
+    <!-- Clients Aside >
     <aside class="clients">
         <div class="container">
             <div class="row">
@@ -262,7 +335,7 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </aside-->
 
     <!-- Contact Section -->
     <section id="login">
