@@ -12,7 +12,7 @@ class Crud extends CI_Controller{
 
 	function index(){
 		$data['data_pembeli'] = $this->m_data->tampil_data()->result();
-		$this->load->view('v_admin',$data);
+		$this->load->view('admin_panel',$data);
 	}
 
 	function tambah(){
@@ -135,6 +135,12 @@ function hapus($no_ktp){
     $where = array('no_ktp' => $no_ktp);
     $this->m_data->hapus_data($where,'data_pembeli');
     redirect('admin/index');
+  }
+  
+  function hapus2($no_ktp){
+    $where = array('no_ktp' => $no_ktp);
+    $this->m_data->hapus_data($where,'data_pembeli');
+    redirect('admin2/index');
   }
 }
 
