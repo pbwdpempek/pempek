@@ -147,25 +147,29 @@
 					<h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 					<input type="number" name="lenjer" placeholder="Rp4000/biji" id="lenjer" class="form-control">
-				</div>
+					<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>
+		    </div>
 				
                 <div class="col-md-3">
                     <h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 				<input type="number" name="kapalselam" placeholder="Rp4000/biji" id="kapalselam" class="form-control">
-				</div>
+				<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>	
+		    </div>
 				
 				<div class="col-md-3">
                     <h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 				<input type="number" name="kulit" placeholder="Rp4000/biji" class="form-control">
-				</div>
+				<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>	
+		    </div>
                
                 <div class="col-md-3">
                     <h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 					<input type="number" name="adaan" placeholder="Rp4000/biji" id="adaan" class="form-control">
-					</div>
+					<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>		
+		    </div>
 				
             </div>
 			
