@@ -60,6 +60,7 @@
             <div class="row">
                 <div class="col-lg-12">
 					<form action="<?php echo base_url(). 'index.php/crud/tambah_aksi'; ?>" enctype="multipart/form-data" method="post">
+					
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4">
                                 <div  class="form-group">
@@ -81,6 +82,13 @@
 								<h6> Pesanan Pempek Kulit :</h6>
                                     <input type="text" class="form-control"  name="kulit2" id="kulit2" value="<?php echo $this->input->post('kulit'); ?>">
                                     <p class="help-block text-danger"></p>
+                                </div>
+								<div class="form-group">
+								
+								<h6> Total :</h6>
+                                    <input type="text" class="form-control"  name="total" id="total" value="<?php  echo $this->input->post('thotal'); ?>" disabled >
+                                    <p class="help-block text-danger"></p>
+									
                                 </div>
 								<div class="form-group">
 								<h6> Nomor Identitas :</h6>
@@ -108,6 +116,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
+							
                            
                             </div>
                             <div class="clearfix"></div>
@@ -121,7 +130,7 @@
 					
                 </div>
             </div>
-        </div>
+        
    
 
     <footer>
@@ -173,6 +182,21 @@
 
     <!-- Theme JavaScript -->
     <script src="<?php echo base_url().'/assets/js/agency.min.js';?>"></script>
+	<script>
+		$(function () {
+		  
+			$("#lenjer2, #kapalselam2, #adaan2, #kulit2").on('input', function () {
+				var text = $('#total');
+				var lenjer2 = parseInt($('input[name=lenjer2').val());
+				var kapalselam2 = parseInt($('input[name=kapalselam2').val());
+				var adaan2 = parseInt($('input[name=adaan2').val());
+				var kulit2 = parseInt($('input[name=kulit2').val());
+				var total = lenjer2 + kapalselam2 + adaan2 + kulit2;
+				text.val(total*4000);
+				
+			});
+		})
+	</script>
 
 </body>
 
