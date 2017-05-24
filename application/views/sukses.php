@@ -113,6 +113,7 @@
                     <h4 class="service-heading">Pempek Lenjer</h4>
                     <p class="text-muted">Pempek lenjer adalah salah satu jenis atau ragam dari pempek yang terkenal khas dari Kota Palembang dan Sumatera Selatan pada umumnya.</p>
 				</div>
+				
 				<div class="col-md-3">
                     <span class="fa-stack fa-4x">
                        <img src="<?php echo base_url().'assets/img/pempek-kapalselam.jpg';?>" width="130" height="100"/>
@@ -141,28 +142,29 @@
             <div class="row text-center">
 			<?php echo form_open('crud/tambah'); ?>
 			    <div class="col-md-3">
-					<h5> Mau pesan?* </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-					<input type="number" name="lenjer" id="lenjer" class="form-control">
+					<h4> Mau pesan?* </h4>
+					<p> Masukan jumlah pesanan Anda dibawah ini</p>
+					<input type="number" name="lenjer" placeholder="Rp4000/biji" id="lenjer" class="form-control">
 				</div>
 				
                 <div class="col-md-3">
-                    <h5> Mau pesan?* </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="kapalselam" id="kapalselam" class="form-control">
+                    <h4> Mau pesan?* </h4>
+					<p> Masukan jumlah pesanan Anda dibawah ini</p>
+				<input type="number" name="kapalselam" placeholder="Rp4000/biji" id="kapalselam" class="form-control">
 				</div>
 				
 				<div class="col-md-3">
-                    <h5> Mau pesan?* </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-				<input type="number" name="kulit" class="form-control">
+                    <h4> Mau pesan?* </h4>
+					<p> Masukan jumlah pesanan Anda dibawah ini</p>
+				<input type="number" name="kulit" placeholder="Rp4000/biji" class="form-control">
 				</div>
                
                 <div class="col-md-3">
-                    <h5> Mau pesan?* </h5>
-					<h6> Masukan jumlah pesanan Anda dibawah ini</h6>
-					<input type="number" name="adaan" id="adaan" class="form-control">
-				</div>
+                    <h4> Mau pesan?* </h4>
+					<p> Masukan jumlah pesanan Anda dibawah ini</p>
+					<input type="number" name="adaan" placeholder="Rp4000/biji" id="adaan" class="form-control">
+					</div>
+				
             </div>
 			
 					
@@ -185,13 +187,23 @@
             <div id="success"></div>
 			<h1>  </h1>
             <button  type="submit" value="login" class="btn btn-xl">BELI</button>
+			<input type="text" name="thotal" id="thotal" hidden>
             </div>
 			<?php echo form_close(); ?>
 			
-			<div class="row">
-			<div class="col-md-4">
-			<h6 style="color:red">*Pesanan berupa kemasan beku (frozen)</h6>
-			<h6 style="color:red">(harga sewaktu-waktu bisa berubah)</h6>
+			
+			<div class="row text-right">
+			<div class="col-md-3">
+			<p style="color:red" class="text-muted"></br></p>
+			</div>
+			<div class="col-md-3">
+			<p style="color:red" class="text-muted"></br></p>
+			</div>
+			<div class="col-md-3">
+			<p style="color:red" class="text-muted"></br></p>
+			</div>
+			<div class="col-md-3">
+			<p style="color:red" >* Pesanan berupa kemasan beku<br>(harga sewaktu-waktu bisa berubah)</br></p>
 			</div>
 			</div>
 			
@@ -213,21 +225,21 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo base_url().'assets/img/about/1.jpg';?>" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo base_url().'assets/img/about/awal.jpg';?>" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4><br><br>2017</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                    <h4><br><br>Pempek Asli Palembang</h4>
+                                    <h4 class="subheading">Frozen Pempek</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Berdiri sejak 2017 di Surabaya</p>
+                                    <p class="text-muted">Pesanan berupa frozen pempek, tak menutup kemungkinan menerima pesanan jadi</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo base_url().'assets/img/about/2.jpg';?>" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo base_url().'assets/img/about/Map-icon.png';?>" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -241,7 +253,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo base_url().'assets/img/about/3.jpg';?>" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo base_url().'assets/img/about/contact.png';?>" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -249,7 +261,7 @@
                                     <h4 class="subheading">Hubungi Kami</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Cek Mini: 0813xxxxx<br>Syamsinar: 0813xxxxx<br>Nina Nandika:081xxxx</p>
+                                    <p class="text-muted">Cek Mini: 082176144844<br>Syamsinar: 081331064297<br>Nina Nandika: 081339182897</p>
                                 </div>
                             </div>
                         </li>
@@ -609,6 +621,21 @@
 
     <!-- Theme JavaScript -->
     <script src="<?php echo base_url().'/assets/js/agency.min.js';?>"></script>
+	<script>
+		$(function () {
+		  
+			$("#lenjer, #kapalselam, #adaan, #kulit").on('input', function () {
+				var text = $('#thotal');
+				var lenjer = parseInt($('input[name=lenjer').val());
+				var kapalselam = parseInt($('input[name=kapalselam').val());
+				var adaan = parseInt($('input[name=adaan').val());
+				var kulit = parseInt($('input[name=kulit').val());
+				var thotal = lenjer + kapalselam + adaan + kulit;
+				text.val(thotal*4000);
+				
+			});
+		})
+	</script>
 
 </body>
 
