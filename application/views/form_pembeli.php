@@ -59,7 +59,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-					<form action="<?php echo base_url(). 'index.php/crud/tambah_aksi'; ?>" enctype="multipart/form-data" method="post">
+					<form action="<?php echo base_url(). 'index.php/crud/tambah_aksi/'; ?>" enctype="multipart/form-data" method="post">
 					
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4">
@@ -86,7 +86,8 @@
 								<div class="form-group">
 								
 								<h6> Total :</h6>
-                                    <input type="text" class="form-control"  name="total" id="total" value="<?php  echo $this->input->post('thotal'); ?>" disabled >
+                                    <input type="text" class="form-control"  name="total" id="total" value="<?php  echo $this->input->post('thotal'); ?>" disabled>
+<input type="hidden" class="form-control"  name="total" id="htotal" value="<?php  echo $this->input->post('thotal'); ?>" >
                                     <p class="help-block text-danger"></p>
 									
                                 </div>
@@ -187,12 +188,26 @@
 		  
 			$("#lenjer2, #kapalselam2, #adaan2, #kulit2").on('input', function () {
 				var text = $('#total');
+				var htext = $('#htotal');
 				var lenjer2 = parseInt($('input[name=lenjer2').val());
+				if (($('input[name=lenjer2').val()) == '') {
+					$('input[name=lenjer2').val(0);
+				}
 				var kapalselam2 = parseInt($('input[name=kapalselam2').val());
+				if (($('input[name=kapalselam2').val()) == '') {
+					$('input[name=kapalselam2').val(0);
+				}
 				var adaan2 = parseInt($('input[name=adaan2').val());
+				if (($('input[name=adaan2').val()) == '') {
+					$('input[name=adaan2').val(0);
+				}
 				var kulit2 = parseInt($('input[name=kulit2').val());
+				if (($('input[name=kulit2').val()) == '') {
+					$('input[name=kulit2').val(0);
+				}
 				var total = lenjer2 + kapalselam2 + adaan2 + kulit2;
 				text.val(total*4000);
+				htext.val(total*4000);
 				
 			});
 		})
