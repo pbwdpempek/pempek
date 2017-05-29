@@ -148,29 +148,29 @@
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 					<input type="number" name="lenjer" placeholder="Rp4000/biji" id="lenjer" class="form-control">
 					<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>
-		    </div>
+				</div>
 				
                 <div class="col-md-3">
                     <h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 				<input type="number" name="kapalselam" placeholder="Rp4000/biji" id="kapalselam" class="form-control">
-				<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>	
-		    </div>
+				<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>
+				</div>
 				
 				<div class="col-md-3">
                     <h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 				<input type="number" name="kulit" placeholder="Rp4000/biji" class="form-control">
-				<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>	
-		    </div>
+				<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>
+				</div>
                
                 <div class="col-md-3">
                     <h4> Mau pesan?* </h4>
 					<p> Masukan jumlah pesanan Anda dibawah ini</p>
 					<input type="number" name="adaan" placeholder="Rp4000/biji" id="adaan" class="form-control">
-					<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>		
-		    </div>
-				
+					<p><i style="color: #ccc">(masukan 0 jika tidak membeli item)</i></p>
+					</div>
+											
             </div>
 			
 					
@@ -361,7 +361,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Login</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Login khusus admin.</h3>
                 </div>
             </div>
             <div class="row">
@@ -633,9 +633,13 @@
 			$("#lenjer, #kapalselam, #adaan, #kulit").on('input', function () {
 				var text = $('#thotal');
 				var lenjer = parseInt($('input[name=lenjer').val());
+				
 				var kapalselam = parseInt($('input[name=kapalselam').val());
+				
 				var adaan = parseInt($('input[name=adaan').val());
+				
 				var kulit = parseInt($('input[name=kulit').val());
+				
 				var thotal = lenjer + kapalselam + adaan + kulit;
 				text.val(thotal*4000);
 				
