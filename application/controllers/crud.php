@@ -7,13 +7,14 @@ class Crud extends CI_Controller{
 		parent::__construct();		
 		$this->load->model('m_data');
 		$this->load->helper('url');
-
+		$this->load->library('email');
 	}
 
 	function index(){
 		$data['data_pembeli'] = $this->m_data->tampil_data()->result();
 		$this->load->view('admin_panel',$data);
 	}
+	
 
 	function tambah(){
 		$this->load->view('form_pembeli');
@@ -23,6 +24,9 @@ class Crud extends CI_Controller{
 		$this->load->view('sukses');
 	}
 	
+function gagal(){
+		$this->load->view('gagal');
+	}
 	function tambah_aksi(){
 		$nama_user = $this->input->post('nama_user');
 		$alamat_user = $this->input->post('alamat_user');
@@ -34,7 +38,7 @@ class Crud extends CI_Controller{
 		$no_ktp = $this->input->post('no_ktp');
 		$no_hp = $this->input->post('no_hp');
 		$status = $this->input->post('status');
-		
+		$total = $this->input->post('total');
 		
  
 		$data = array(
@@ -47,14 +51,15 @@ class Crud extends CI_Controller{
 			'kulit' => $kulit,
 			'no_ktp' => $no_ktp,
 			'no_hp' => $no_hp,
-			'status' => $status
+			'status' => $status,
+			'total' => $total
 			);
 	
 		$this->m_data->input_data($data,'data_pembeli');
 		redirect('crud/sukses');
 	}
 	
-	
+		
 	function edit($no_ktp) {
     $where = array('no_ktp' => $no_ktp);
     $data['data_pembeli'] = $this->m_data->edit_data($where,'data_pembeli')->result();
@@ -87,6 +92,7 @@ class Crud extends CI_Controller{
                redirect('crud/sukses'); //jika berhasil maka akan ditampilkan view vupload
  
            }else{  /* jika upload gambar gagal maka akan menjalankan skrip ini */
+redirect('crud/gagal');
                $er_upload=$this->upload->display_errors(); /* untuk melihat error uploadnya apa */
                //$this->load->view('form_pembeli', $er_upload); //jika gagal maka akan ditampilkan form upload
            }
@@ -107,7 +113,7 @@ function update() {
 		$no_ktp = $this->input->post('no_ktp');
 		$no_hp = $this->input->post('no_hp');
 		$status = $this->input->post('status');
-		
+		$total = $this->input->post('total');
 		
        	$data = array(
 			'nama_user' => $nama_user,
@@ -119,8 +125,8 @@ function update() {
 			'kulit' => $kulit,
 			'no_ktp' => $no_ktp,
 			'no_hp' => $no_hp,
-			'status' => $status
-			
+			'status' => $status,
+			'total' => $total
 			);
 			
 		 $where = array(
@@ -134,14 +140,10 @@ function update() {
 function hapus($no_ktp){
     $where = array('no_ktp' => $no_ktp);
     $this->m_data->hapus_data($where,'data_pembeli');
+	$this->m_data->hapus_data($where,'bukti_pembayaran');
     redirect('admin/index');
   }
   
-  function hapus2($no_ktp){
-    $where = array('no_ktp' => $no_ktp);
-    $this->m_data->hapus_data($where,'data_pembeli');
-    redirect('admin2/index');
-  }
 }
 
 ?>
