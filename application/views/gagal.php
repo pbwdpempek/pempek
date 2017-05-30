@@ -63,7 +63,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Oops, rupanya anda belum menyertakan file</div>
+                <div class="intro-lead-in">File yang Anda upload error!</div>
+<div class="intro-lead-in">Tinjau kembali file Anda</div>
                 <div class="intro-heading">Halaman 404!</div>
                 <a href="<?php echo base_url(). 'index.php/'; ?>" class="page-scroll btn btn-xl">original-pempek.xyz</a>
             </div>
