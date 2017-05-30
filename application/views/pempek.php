@@ -308,6 +308,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="file" name='gambar' id='gambar'>
+					<p><i style="color:#ccc">(maximum upload 5 MB)</i></p>
 									<p class="help-block text-danger"></p>
                                 </div>
                                 
