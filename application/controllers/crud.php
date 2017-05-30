@@ -71,7 +71,8 @@ function gagal(){
    
        $config['upload_path'] = './upload/'; //variabel path untuk config upload
        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
- 
+ 	$config['max_size'] = '5000';
+	  
        $this->upload->initialize($config);
  
        $no_ktp      = $this->input->post('no_ktp'); 
